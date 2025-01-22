@@ -7,7 +7,7 @@ library(ggplot2)
 library(readr)
 
 # Set your working directory
-setwd("C:/Users/patad/PATA/UNI_MUNI/RESEARCH/2025_RESEARCH/EEFI_Workshops/workshops_EFFI/vegetation_donana/")
+setwd("/home/ec2-user/")
 
 ## The script has the following sections:
 
