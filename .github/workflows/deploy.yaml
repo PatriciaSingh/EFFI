@@ -29,7 +29,7 @@ jobs:
 
     - name: Copy vegetation_donana folder to server
       run: |
-        scp -o StrictHostKeyChecking=no -r vegetation_donana ubuntu@ec2-16-171-0-75.eu-north-1.compute.amazonaws.com:/home/ec2-user/
+        scp -o StrictHostKeyChecking=no -r /home/runner/work/EFFI/EFFI/vegetation_donana ubuntu@ec2-16-171-0-75.eu-north-1.compute.amazonaws.com:/home/ec2-user/
 
     - name: Run R script on server
       run: |
