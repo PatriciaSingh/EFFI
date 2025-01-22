@@ -7,6 +7,7 @@ install.packages("readr")
 install.packages("ows4R")
 install.packages("jagsUI")
 install.packages("coda")
+install.packages("units")
 
 # Load libraries
 library("dplyr")
@@ -17,3 +18,4 @@ library("readr")
 library("ows4R")
 library("jagsUI")
 library("coda")
+library("units")
