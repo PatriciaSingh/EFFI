@@ -25,4 +25,4 @@ jobs:
 
     - name: Verify GitHub Actions on server
       run: |
-        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ec2-user@your-aws-server-ip 'echo "GitHub Actions are working" > /tmp/github_actions_test.txt'
+        ssh -o StrictHostKeyChecking=no ec2-user@your-aws-server-ip 'echo "GitHub Actions are working" > /tmp/github_actions_test.txt'
