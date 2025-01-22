@@ -1,13 +1,7 @@
 print("Hello, World!")
-library(ows4R)
-library(sf)
-library(terra)
-library(dplyr)
-library(ggplot2)
-library(readr)
 
 # Set your working directory
-setwd("/home/ec2-user/")
+setwd("/home/rstudio/vegetation_donana/")
 
 ## The script has the following sections:
 
@@ -345,7 +339,7 @@ params <- c( "a0.h",
              "fit1.data",
              "fit1.pred")
 
-library(jagsUI)
+
 
 na <- 10000 ; ni <- 450000 ; nt <- 500 ; nb <- 100000 ; nc <- 3
 
@@ -353,7 +347,7 @@ na <- 10000 ; ni <- 450000 ; nt <- 500 ; nb <- 100000 ; nc <- 3
 out1 <- jags(bdata, inits, params, "abundance change shrubs.txt", n.adapt = na, n.chains = nc,
              n.thin = nt, n.iter = ni, n.burnin = nb,parallel=T)
 
-library(coda)
+
 
 # Extract MCMC samples
 mcmc_out <- out1$samples
