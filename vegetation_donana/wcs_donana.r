@@ -21,7 +21,7 @@ setwd("/Users/maria/Dropbox/collaborations/EEFI/workshop")
 
 ### Load location of the study plots with abundace monitoring since 2007:
 ### Reference system is WGS84
-## Reference system is test123
+## Reference system is test1234
 coords_long=read_csv(url("https://raw.githubusercontent.com/MariaPaniw/workshops_EFFI/refs/heads/main/vegetation_donana/coords_plot_since2007.csv?token=GHSAT0AAAAAAC2TAOO4TOA3HUOY7SYFFRE4Z3RUREQ"))
 
 crdref <- "+proj=longlat +datum=WGS84"
