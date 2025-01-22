@@ -8,6 +8,7 @@ install.packages("ows4R")
 install.packages("jagsUI")
 install.packages("coda")
 install.packages("units")
+install.packages("rgdal")
 
 # Load libraries
 library("dplyr")
@@ -19,3 +20,4 @@ library("ows4R")
 library("jagsUI")
 library("coda")
 library("units")
+library("rgdal")

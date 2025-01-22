@@ -7,14 +7,16 @@ COPY . /home/rstudio/vegetation_donana
 WORKDIR /home/rstudio/vegetation_donana
 
 RUN apt-get update && apt-get install -y \
+    libgdal-dev \
+    libproj-dev \
+    libgeos-dev \
+    libcurl4-openssl-dev \
+    libsqlite3-dev \
     libudunits2-dev \
+    zlib1g-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y \
-    libproj-dev \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
 
 
 # Set the default command to run an R script
