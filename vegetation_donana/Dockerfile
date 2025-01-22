@@ -7,4 +7,5 @@ COPY . /home/rstudio/vegetation_donana
 WORKDIR /home/rstudio/vegetation_donana
 
 # Set the default command to run an R script
-CMD ["Rscript", "main_analyses_donana.r"]
+RUN Rscript install_libraries.R
+# CMD ["Rscript", "main_analyses_donana.r"]

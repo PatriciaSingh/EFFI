@@ -1,0 +1,19 @@
+# Install packages
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("sf")
+install.packages("terra")
+install.packages("readr")
+install.packages("ows4R")
+install.packages("jagsUI")
+install.packages("coda")
+
+# Load libraries
+library("dplyr")
+library("ggplot2")
+library("sf")
+library("terra")
+library("readr")
+library("ows4R")
+library("jagsUI")
+library("coda")
