@@ -1,3 +1,9 @@
+install.packages("ows4R")
+install.packages("sf")
+install.packages("terra")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("readr")
 
 library(ows4R)
 library(sf)
