@@ -22,10 +22,19 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
     - name: Install R
       run: |
         sudo apt-get update
         sudo apt-get install -y r-base
+
+    - name: Debug workspace
+      run: |
+        echo "Current working directory:"
+        pwd
+        echo "Workspace contents:"
+        ls -l /home/runner/work/EFFI/EFFI/
+        ls -l /home/runner/work/EFFI/EFFI/vegetation_donana
 
     - name: Copy vegetation_donana folder to server
       run: |
@@ -34,6 +43,7 @@ jobs:
     - name: Run R script on server
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@ec2-16-171-0-75.eu-north-1.compute.amazonaws.com 'Rscript /home/ec2-user/vegetation_donana/main_analyses_donana.r'
+
     - name: Verify GitHub Actions on server
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@ec2-16-171-0-75.eu-north-1.compute.amazonaws.com 'echo "GitHub Actions are working again 1" > /tmp/github_actions_test.txt'
