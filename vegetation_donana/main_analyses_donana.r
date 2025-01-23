@@ -11,7 +11,7 @@ setwd("/home/rstudio/vegetation_donana/")
 # 3. Model abundance change. Here, I just use a simple autoregressive model done in JAGS
 # 4. Do the forecast and quantify forecast skill
 ############### 
-#1. LOAD SPATIAL DATA
+#1. LOAD SPATIAL DATA one
 
 ### Load location of the study plots with abundance monitoring since 2007:
 ### Reference system is WGS84
