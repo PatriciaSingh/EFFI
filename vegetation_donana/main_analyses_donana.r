@@ -3,6 +3,13 @@ print("Hello, World!")
 # Set your working directory
 setwd("/home/rstudio/vegetation_donana/")
 
+library("dplyr")
+library("ggplot2")
+library("sf")
+library("terra")
+library("readr")
+library("jagsUI")
+library("coda")
 ## The script has the following sections:
 
 # 1. Load the spatial data. I load the coordinates of the monitoring plots (and convert them into spatial points) and a series satellite-based NDVI raster data from a local drive 
@@ -20,7 +27,7 @@ setwd("/home/rstudio/vegetation_donana/")
 coords_long <- read.csv("coords_plot_since2007.csv")
 
 crdref <- "+proj=longlat +datum=WGS84"
-pts_long <- vect(cbind(coords_long$Long,coords_long$Lat), atts=coords_long[,c("ID","Elevation")],crs=crdref)
+pts_long <- terra::vect(cbind(coords_long$Long,coords_long$Lat), atts=coords_long[,c("ID","Elevation")],crs=crdref)
 pts_long
 
 newcrs <- "+proj=utm +zone=29 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs"
