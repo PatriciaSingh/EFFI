@@ -16,8 +16,8 @@ COPY shiny_app /home/rstudio/vegetation_donana/shiny_app
 EXPOSE 3838
 
 # Set the default command to run an R script
-RUN Rscript install_libraries.R && echo "script1.R has finished running"
-RUN Rscript main_analyses_donana.r
+# RUN Rscript install_libraries.R && echo "script1.R has finished running"
+# RUN Rscript main_analyses_donana.r
 
 # Run the Shiny app
 CMD ["R", "-e", "shiny::runApp('/home/rstudio/vegetation_donana/shiny_app')"]
