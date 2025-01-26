@@ -20,4 +20,4 @@ EXPOSE 3838
 # RUN Rscript main_analyses_donana.r
 
 # Run the Shiny app
-CMD ["R", "-e", "shiny::runApp('/home/rstudio/vegetation_donana/shiny_app')"]
+CMD ["R", "-e", "shiny::runApp('/home/rstudio/vegetation_donana/shiny_app', host = '0.0.0.0', port = 3838')"]
