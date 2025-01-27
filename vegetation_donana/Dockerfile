@@ -6,6 +6,14 @@ COPY . /home/rstudio/vegetation_donana
 # Set the working directory
 WORKDIR /home/rstudio/vegetation_donana
 
+# Set the default command to run an R script
+RUN Rscript install_libraries.R && echo "install_libraries.R has finished running"
+
+
+# Add the default command to run an R script when the container starts
+CMD ["Rscript", "install_libraries.R"]
+
+# RUN Rscript main_analyses_donana.r
 # Install Shiny
 #RUN R -e "install.packages('shiny')"
 
@@ -15,9 +23,7 @@ WORKDIR /home/rstudio/vegetation_donana
 # Expose the Shiny app port
 #EXPOSE 3838
 
-# Set the default command to run an R script
-RUN Rscript install_libraries.R && echo "script1.R has finished running"
-# RUN Rscript main_analyses_donana.r
+
 
 # Run the Shiny app
 #CMD ["R", "-e", "shiny::runApp('/home/rstudio/vegetation_donana/shiny_app', host = '0.0.0.0', port = 3838)"]
